@@ -9,7 +9,7 @@ body, button, a {
 }
 
 .container {
-    width: 76%;
+    width: 70%;
     margin: 0 auto;
     position: relative;
 }
@@ -26,3 +26,10 @@ a {
         text-decoration: underline;
     }
 }
+
+
+@import "./blocks/header";
+@import "./blocks/main";
+@import "./blocks/qualites";
+@import "./blocks/why";
+@import "./blocks/reviews";
