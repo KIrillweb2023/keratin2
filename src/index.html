@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keratin | Botox</title>
     <link rel="stylesheet" href="./css/style.min.css">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
 </head>
 <body>
     <header class="header">
@@ -166,121 +167,243 @@
                     <p class="why-list-item_text"> Защита от внешних воздействий </p>
                 </li>
             </ul>
-
-
-            
         </div>
         <img src="./img/components/ImportantSection-img/ImportantImage.png" alt="" class="why-image">
     </section>
 
+    
     <section class="reviews">
-        <div class="container">
-            <div class="reviews-title">
-                Частные отзывы
+        <div class="reviews__container container">
+            <div class="reviews__header">
+                <h2 class="reviews__title">
+                    Частные отзывы
+                </h2>
+                <p class="reviews__subtitle">
+                    Клиентов и профессионалов
+                </p>
             </div>
-            <div class="reviews-subtitle">
-                Клиентов, и проффисоналов
-            </div>
-
-            <div class="swiper">
-
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-header">
-                            <img class="swiper-item-header_peopleAvatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="people-avatar">
-                            <div class="swiper-item-header_text">
-                                <h4 class="swiper-item-header_text__title">Пашкова Алла</h4>
-                                <h5 class="swiper-item-header_text__subtitle">Клиент</h5>
-                                <div class="swiper-item-header_text__stars">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
+            <div class="reviews__swiper-container">
+                <div class="reviews__swiper swiper">
+                    <div class="swiper-wrapper">
+                        <div class="reviews__slide swiper-slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png"
+                                    alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
                         </div>
-
-                        <h4 class="swiper-slide-title">Прекрасно себя показал</h4>
-                        <p class="swiper-slide-descr">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.\
-                        </p>
-                        <p class="swiper-slide-subText">Посмотреть отзыв</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-header">
-                            <img class="swiper-item-header_peopleAvatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="people-avatar">
-                            <div class="swiper-item-header_text">
-                                <h4 class="swiper-item-header_text__title">Пашкова Алла</h4>
-                                <h5 class="swiper-item-header_text__subtitle">Клиент</h5>
-                                <div class="swiper-item-header_text__stars">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
+                     
+                        <div class="reviews__slide swiper-slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png"
+                                    alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
                         </div>
-
-                        <h4 class="swiper-slide-title">Прекрасно себя показал</h4>
-                        <p class="swiper-slide-descr">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.\
-                        </p>
-                        <p class="swiper-slide-subText">Посмотреть отзыв</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-header">
-                            <img class="swiper-item-header_peopleAvatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="people-avatar">
-                            <div class="swiper-item-header_text">
-                                <h4 class="swiper-item-header_text__title">Пашкова Алла</h4>
-                                <h5 class="swiper-item-header_text__subtitle">Клиент</h5>
-                                <div class="swiper-item-header_text__stars">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
+                        <div class="reviews__slide swiper-slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png"
+                                    alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
                         </div>
-
-                        <h4 class="swiper-slide-title">Прекрасно себя показал</h4>
-                        <p class="swiper-slide-descr">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.\
-                        </p>
-                        <p class="swiper-slide-subText">Посмотреть отзыв</p>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="swiper-slide-header">
-                            <img class="swiper-item-header_peopleAvatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="people-avatar">
-                            <div class="swiper-item-header_text">
-                                <h4 class="swiper-item-header_text__title">Пашкова Алла</h4>
-                                <h5 class="swiper-item-header_text__subtitle">Клиент</h5>
-                                <div class="swiper-item-header_text__stars">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
-                                    <img src="./icons/components/Star-icon/Star-icon.svg" alt="star">
+                        <div class="reviews__slide swiper-slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png"
+                                    alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
                         </div>
-
-                        <h4 class="swiper-slide-title">Прекрасно себя показал</h4>
-                        <p class="swiper-slide-descr">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.\
-                        </p>
-                        <p class="swiper-slide-subText">Посмотреть отзыв</p>
+                        <div class="reviews__slide swiper-slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png"
+                                    alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
+                        </div>
+                        <div class="reviews__slide swiper-slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png"
+                                    alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg"
+                                            alt="star" aria-hidden="true">
+                                    </div>
+                                </div>
+                            </div>
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
+                        </div>
                     </div>
-                  
-                   
                 </div>
-
+    
+                <div class="reviews__navigation">
+                    <button class="reviews__swiper-button-prev">
+                        <img src="icons/components/Arrows-icon/Arrow-left-icon.svg" alt="Предыдущий">
+                    </button>
+                    <button class="reviews__swiper-button-next">
+                        <img src="icons/components/Arrows-icon/Arrow-right-icon.svg" alt="Следующий">
+                    </button>
+                </div>
+    
+                <div class="reviews__pagination swiper-pagination"></div>
             </div>
         </div>
     </section>
-    
+
+    <section class="video"><h1>hello</h1></section>
+
+    <!-- <section class="price">
+        <div class="container">
+            <div class="master-block">
+                <h2 class="master-block__title">Мастер</h2>
+                <p class="master-block__name">Нешик Миля Акрамовна</p>
+                <p class="master-block__service">Кератиновое выпрямление. Ботокс | Бистеплакстия</p>
+
+                <div class="master-block__prices">
+                    <div class="master-block__price-item">
+                        <span class="master-block__length">До плеч</span>
+                        <span class="master-block__cost">2500-3000₽</span>
+                    </div>
+                    <div class="master-block__price-item">
+                        <span class="master-block__length">До лопаток</span>
+                        <span class="master-block__cost">3000-3500₽</span>
+                    </div>
+                    <div class="master-block__price-item">
+                        <span class="master-block__length">До талии</span>
+                        <span class="master-block__cost">3500-4000₽</span>
+                    </div>
+                    <div class="master-block__price-item">
+                        <span class="master-block__length">Ниже талии</span>
+                        <span class="master-block__cost">4000-4500₽</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script async src="js/script.js"></script>
 </body>
 </html>
