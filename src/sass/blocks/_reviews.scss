@@ -15,22 +15,24 @@
         font-weight: 500;
     }
 
-    &__swiper {
-        width: 100%;
-        margin-top: 1.875rem; 
+    &-slider {
         overflow: hidden;
-
-        .swiper-wrapper {
-            display: flex;
-            gap: 2.5rem;
-            width: 100%;
+        margin-top: 20px;
+        &-container {
+            display: flex   ;
+            justify-content: space-between;
+            transition: 0.7s ease-in-out;
+            transform: translateX(0px);
+            // width: 2000px;
+            // &:hover {
+            //     transform: translateX(-110px);
+            // }
         }
     }
 
     &__slide {
-        width: 30%;
-        min-width: 380px;
-        padding: 29px 18px;
+        width: 24.5%;
+        padding: 30px;
         background-color: #ffffff;
         border-radius: 1.25rem; 
         display: flex;
@@ -43,9 +45,9 @@
         }
 
         &-avatar {
-            width: 6.25rem; 
-            height: 6.25rem; 
-            border-radius: 50%; 
+            width: 5rem; 
+            height: 5rem; 
+            border-radius: 100%; 
             overflow: hidden; 
             img {
                 width: 100%;
@@ -59,7 +61,6 @@
                 color: #728399;
                 font-size: 1.25rem;
                 font-weight: 500;
-                margin-bottom: 0.4375rem; 
             }
 
             &--role {
@@ -102,64 +103,60 @@
             text-decoration: none;
         }
     }
-    .reviews {
-        &__swiper-container {
-            position: relative;
-        }
-        &__navigation {
-            position: absolute;
-            top: 50%;
-            left: -9%;
-            right: -9%;
-            display: flex;
-            justify-content: space-between;  
-            align-items: center;
-            padding: 0 1rem;                 
-            transform: translateY(-50%);     
-            
-        }
-        &__swiper-button-prev,
-        &__swiper-button-next {
-            width: 2.5rem;  
-            height: 2.5rem;         
-            border-radius: 50%;
-            background: rgba(35, 137, 255, 0.1);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-            border: none;            
-            padding: 0;         
-            &:hover {
-               border: 1px solid rgba(35, 138, 255, 0.534);
-               background: transparent;
-            }
-            img {
-                width: 15px;         
-                height: 15px;      
-                object-fit: contain;  
-            }
-        }
-        &__pagination {
-            position: relative;
-            text-align: center;
-            margin-top: 1rem;
-            .swiper-pagination-bullet {     
-            width: 0.5rem;         
-            height: 0.5rem;         
-            display: inline-block;
-            border-radius: 50%;
-            background-color: #ddd;      
-            opacity: 1;                
-            margin: 0 0.25rem;      
-            cursor: pointer;
-            }
-    
-            .swiper-pagination-bullet-active { 
-                background-color: #2389FF;    
-            }
-        }
-        
+    &__navigation {
+        position: absolute;
+        top: 57%;
+        left: -9%;
+        right: -9%;
+        display: flex;
+        justify-content: space-between;  
+        align-items: center;
+        padding: 0 1rem;                 
+        // transform: translateY(-50%);     
     }
+
+    &__navigation-button-prev,
+    &__navigation-button-next {
+        width: 2.5rem;  
+        height: 2.5rem;         
+        border-radius: 50%;
+        background: rgba(35, 137, 255, 0.1);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border: none;            
+        padding: 0;         
+        &:hover {
+           border: 1px solid rgba(35, 138, 255, 0.534);
+           background: transparent;
+        }
+        img {
+            width: 15px;         
+            height: 15px;      
+            object-fit: contain;  
+        }
+    }
+
+    &__pagination {
+        position: relative;
+        text-align: center;
+        margin-top: 1rem;
+        &-tab {     
+        width: 0.5rem;         
+        height: 0.5rem;         
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #ddd;      
+        opacity: 1;                
+        margin: 0 0.25rem;      
+        cursor: pointer;
+        }
+
+        &-tab-active { 
+            background-color: #2389FF;    
+        }
+    }
+  
 }
