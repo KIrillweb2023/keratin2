@@ -1,0 +1,13 @@
+.map {
+    height: auto;
+    padding: 50px 0 0 0;
+    &__title {
+        font-size: 2rem;
+        color: #304560;
+        font-weight: 500;
+        text-align: left;
+    }
+    &__rizen {
+        margin-top: 50px;
+    }
+}

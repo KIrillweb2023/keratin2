@@ -106,6 +106,4 @@ item.forEach((item) => {
             item.childNodes[1].childNodes[3].style.transform = "rotate(0deg)";
        }
     })
-   
-   
 })
