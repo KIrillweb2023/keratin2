@@ -1,0 +1,104 @@
+.price {
+    height: auto;
+    padding: 40px 0;
+    &__title {
+        font-size: 2rem;
+        color: #304560;
+        font-weight: 500;
+        text-align: center;
+    }
+
+    &-wrapper {
+        margin-top: 20px;
+        display: flex;
+        column-gap: 30px;
+    }
+    &-item {
+        background-color: #4E2D92;
+        padding: 40px 30px;
+        position: relative;
+        width: 50%;
+        border-radius: 15px;
+        box-shadow: 0 10px 20px 5px #4E2D926F;
+        &_img {
+            position: absolute;
+            bottom: 0;
+            right: 20px;
+        }
+        &_title {
+            color: #ffffff;
+            font-size: 26px;
+        }
+        &_subtitle {
+            color: #ffffff;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        &_descr {
+            color: #ffffff;
+            font-size: 20px;
+            margin-top: 15px;
+        }
+        &_border {
+            width: 2px;
+            position: absolute;
+            height: 80%;
+            background-color: #ffffff;
+            border-radius: 10px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 35%
+        }
+
+
+        &_list {
+            list-style-type: none;
+            margin-top: 30px;
+            row-gap: 20px;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            &__row {
+                display: flex;
+                // column-gap: 20px;
+                align-items: center;
+            }
+
+            &__left {
+                display: flex;
+                align-items: center;
+                column-gap: 10px;
+                width: 50%;
+            }
+            &__circle {
+                width: 20px;
+                height: 20px;
+                border-radius: 100%;
+                border: 1px solid #2389FF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            &__block {
+                width: 12px;
+                height: 12px;
+                border-radius: 100%;
+                // border: 1px solid #2389FF;
+                background: #2389FF;
+
+            }
+
+            &__text {
+                color: #fff;
+                font-size: 18px;
+            }
+            &__right {
+                color: #fff;
+                font-size: 18px;
+            }
+
+           
+        }
+    }
+}

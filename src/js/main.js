@@ -84,3 +84,28 @@ window.addEventListener("resize", (e) => {
     console.log("ok")
     resizeWidthContainer()
 })
+
+window.onload = function(){
+    document.getElementById("video").play()
+}
+
+
+
+let item = document.querySelectorAll(".question-item");
+
+item.forEach((item) => {
+    console.log()
+    
+    item.addEventListener('click', (e) => {
+       if(!item.classList.contains("question-item_active")) {
+        item.childNodes[1].childNodes[3].style.transform = "rotate(180deg)";
+        item.classList.add("question-item_active")
+       } else {
+            console.log("none")
+            item.classList.remove("question-item_active")
+            item.childNodes[1].childNodes[3].style.transform = "rotate(0deg)";
+       }
+    })
+   
+   
+})
