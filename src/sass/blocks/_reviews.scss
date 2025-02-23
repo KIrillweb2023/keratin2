@@ -18,16 +18,27 @@
     &-slider {
         overflow: hidden;
         margin-top: 20px;
+        width: 100%;
         &-container {
             display: flex   ;
             justify-content: space-between;
             transition: 0.7s ease-in-out;
-        }
-    }
+            // width: calc(25% * 12);
+            column-gap: 15px;
 
+
+        }
+
+    }
+  
+.swiper-slide {
+    margin-right: 0!important;
+    width: 25%!important;
+}
     &__slide {
         width: 23%;
         padding: 30px;
+      
         background-color: #ffffff;
         border-radius: 1.25rem; 
         display: flex;
@@ -96,6 +107,21 @@
             font-weight: 500;
             font-size: 1.125rem; 
             text-decoration: none;
+        }
+    }
+    @media (max-width: 1500px) {
+        &__slide {
+            width: 33%;
+        }
+    }
+    @media (max-width: 1300px) {
+        &__slide {
+            width: 50%;
+        }
+    }
+    @media (max-width: 850px) {
+        &__slide {
+            width: 100%;
         }
     }
     &__navigation {

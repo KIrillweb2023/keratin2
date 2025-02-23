@@ -2,11 +2,9 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-}
-
-body, button, a {
     font-family: 'Gilroy', sans-serif;
 }
+
 
 .container {
     width: 70%;
@@ -37,3 +35,4 @@ a {
 @import "./blocks/price";
 @import "./blocks/question";
 @import "./blocks/map";
+@import "./blocks/footer";

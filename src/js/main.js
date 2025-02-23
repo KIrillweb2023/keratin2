@@ -1,93 +1,129 @@
-const slider = document.querySelector(".reviews-slider");
-const sliderContainer = document.querySelector(".reviews-slider-container");
-const containerSlide = document.querySelectorAll(".reviews__slide");
-const prevbutton = document.querySelector(".reviews__navigation-button-prev")
-const nextbutton = document.querySelector(".reviews__navigation-button-next")
-const pagination = document.querySelector(".reviews__pagination");
-const tabsPagination = document.querySelectorAll(".reviews__pagination-tab");
-const containerSite = document.querySelector(".container");
+// const slider = document.querySelector(".reviews-slider");
+// const sliderContainer = document.querySelector(".reviews-slider-container");
+// const containerSlide = document.querySelectorAll(".reviews__slide");
+// const prevbutton = document.querySelector(".reviews__navigation-button-prev")
+// const nextbutton = document.querySelector(".reviews__navigation-button-next")
+// const pagination = document.querySelector(".reviews__pagination");
+// const tabsPagination = document.querySelectorAll(".reviews__pagination-tab");
+// const containerSite = document.querySelector(".container");
 
 
-let indexSlide = 0;
+// let indexSlide = 0;
+// let slideScrollWidth;
 
-// function foreachChilds() {
-const slideWidth = containerSite.clientWidth / 4 - 20;
-const slideScrollWidth = containerSite.clientWidth + (containerSite.clientWidth - 1300)
-
-containerSlide.forEach((item, index) => {
-    item.style.width = `${slideWidth}px`
-})
-
-function slideTab(index) {
-    tabsPagination.forEach((item, index) => {
-        item.classList.remove("reviews__pagination-tab-active")
-    })
-    tabsPagination[index].classList.add("reviews__pagination-tab-active")
-}
-
-
-function slideTabClick() {
-    tabsPagination.forEach((item, index) => {
-        // item.classList.remove("reviews__pagination-tab-active")
-
-        item.addEventListener('click', () => {
-            indexSlide = index + 1
-            slideTab(index)
-            console.log(indexSlide)
-            if(indexSlide === 1) {
-                 sliderContainer.style.transform = `translate(-${slideScrollWidth}px)`
-            } else if (indexSlide === 2) {
-                sliderContainer.style.transform = `translate(-${slideScrollWidth * 2}px)`
-            } else if (indexSlide === 0) {
-                 sliderContainer.style.transform = `translate(0px)`
-            }
-        })
-    })
-}
-slideTabClick()
-
+// if(window.innerWidth <= 1500) {
+//     slideScrollWidth = (sliderContainer.clientWidth / 12) * 3;
+// } else if(window.innerWidth <= 1300) {
+//     slideScrollWidth = (sliderContainer.clientWidth / 12) * 2;
+// } else if(window.innerWidth <= 850) {
+//     slideScrollWidth = (sliderContainer.clientWidth / 12);
+// } else {
+//     slideScrollWidth = (sliderContainer.clientWidth / 12) * 4
 // }
 
 
-slideTab(indexSlide)
-nextbutton.addEventListener('click', (e) => {
-    console.log(indexSlide)
-    if(indexSlide < 2) {
-        indexSlide++
-        sliderContainer.style.transform += `translate(-${slideScrollWidth}px)`
-        slideTab(indexSlide)
-    } else {
-        indexSlide = 0;
-        sliderContainer.style.transform = `translate(0px)`
-        slideTab(indexSlide)
-    }
-})
-prevbutton.addEventListener('click', (e) => {
-    if(indexSlide === 0) {
-        indexSlide = 2
-        sliderContainer.style.transform += `translate(-${slideScrollWidth * 2}px)`
-        slideTab(indexSlide)
-    } else {
-        indexSlide--
-        sliderContainer.style.transform += `translate(${slideScrollWidth}px)`
-        slideTab(indexSlide)
-    }
-})
-function resizeWidthContainer() {
-    console.log(slider.clientWidth)
-    sliderContainer.style.width = `${slider.clientWidth + 2712}px`
-}
+// window.addEventListener("resize", (e) => {
+//     console.log(slideScrollWidth)
+//     // resizeWidthContainer()
+  
+//     slideScrollWidth = (sliderContainer.clientWidth / 12) * 4
+
+//     if(window.innerWidth <= 1500) {
+//         slideScrollWidth = (sliderContainer.clientWidth / 12) * 3;
+//     } else if(window.innerWidth <= 1300) {
+//         slideScrollWidth = (sliderContainer.clientWidth / 12) * 2;
+//     } else if(window.innerWidth <= 850) {
+//         slideScrollWidth = (sliderContainer.clientWidth / 4);
+//     }else {
+//         slideScrollWidth = (sliderContainer.clientWidth / 12) * 4
+//     }
+// })
+ 
+
+// // containerSlide.forEach((item, index) => {
+// //     item.style.width = `${slideWidth}px`
+// // })
+
+// function slideTab(index) {
+//     tabsPagination.forEach((item, index) => {
+//         item.classList.remove("reviews__pagination-tab-active")
+//     })
+//     tabsPagination[index].classList.add("reviews__pagination-tab-active")
+// }
 
 
-resizeWidthContainer()
-window.addEventListener("resize", (e) => {
-    console.log("ok")
-    resizeWidthContainer()
-})
+// function slideTabClick() {
+//     tabsPagination.forEach((item, index) => {
+//         // item.classList.remove("reviews__pagination-tab-active")
 
-window.onload = function(){
-    document.getElementById("video").play()
-}
+//         item.addEventListener('click', () => {
+//             indexSlide = index
+//             slideTab(index)
+//             console.log(indexSlide)
+//             if(indexSlide === 1) {
+//                  sliderContainer.style.transform = `translate(-${slideScrollWidth}px)`
+//             } else if (indexSlide === 2) {
+//                 sliderContainer.style.transform = `translate(-${slideScrollWidth * 2}px)`
+//             } else if (indexSlide === 0) {
+//                  sliderContainer.style.transform = `translate(0px)`
+//             }
+//         })
+//     })
+// }
+// slideTabClick()
+
+// // }
+
+// let resultvalueSlider = 0
+// slideTab(indexSlide)
+// nextbutton.addEventListener('click', (e) => {
+//      sliderContainer.style.transform = `translate(0px)`
+//     if(indexSlide < 2) {
+//         indexSlide++
+
+//         sliderContainer.style.transform = `translate(-${resultvalueSlider += slideScrollWidth}px)`
+//         slideTab(indexSlide)
+//     } else {
+//         resultvalueSlider = 0
+//         indexSlide = 0;
+//         sliderContainer.style.transform = `translate(0px)`
+//         slideTab(indexSlide)
+//     }
+// })
+// prevbutton.addEventListener('click', (e) => {
+//     if(indexSlide === 0) {
+//         indexSlide = 2
+//         sliderContainer.style.transform = `translate(-${resultvalueSlider += slideScrollWidth * 2}px)`
+//         slideTab(indexSlide)
+     
+//     } else {
+
+//         indexSlide--
+//         sliderContainer.style.transform = `translate(-${resultvalueSlider -= slideScrollWidth  }px)`
+//         slideTab(indexSlide)
+//     }
+// })
+
+// window.onload = function(){
+//     document.getElementById("video").play()
+// }
+
+import Swiper from "swiper";
+
+const swiper = new Swiper('.swiper', {
+    slidesPerView: 4,  // Показывать 4 слайда
+    slidesPerGroup: 4, // Перелистывать по 4 слайда
+    // spaceBetween: 30,   // Расстояние между слайдами (необязательно)
+    loop: false,       // Не зацикливать слайдер
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+  });
 
 
 
