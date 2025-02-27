@@ -17,19 +17,19 @@
             <nav class="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Преимущества </a>
+                        <a href="#qualites" class="header-nav-list_item__link"> Преимущества </a>
                     </li>
                     <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Почему это важно? </a>
+                        <a href="#why" class="header-nav-list_item__link"> Почему это важно? </a>
                     </li>
                     <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Отзывы </a>
+                        <a href="#reviews" class="header-nav-list_item__link"> Отзывы </a>
                     </li>
                     <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Клиентам </a>
+                        <a href="#material" class="header-nav-list_item__link"> Процесс </a>
                     </li>
                     <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Прайс-лист </a>
+                        <a href="#price" class="header-nav-list_item__link"> Прайс-лист </a>
                     </li>
                     <li class="header-nav-list_item">
                         <a href="#" class="header-nav-list_item__link"> Вопросы </a>
@@ -37,15 +37,18 @@
                     <li class="header-nav-list_item">
                         <a href="#" class="header-nav-list_item__link"> Мы на карте </a>
                     </li>
-                    <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Обратная связь </a>
-                    </li>
                 </ul>
             </nav>
 
             <div class="header-phone">
                 <img src="./icons/components/Phone-header-icon/Phone-header-icon.svg" alt="phone-icon" class="header-phone-img">
                 <p class="header-phone-text">+7 (901) 108-96-16</p>
+            </div>
+
+            <div class="header-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
         </div>
     </header>
@@ -72,7 +75,7 @@
         </section>
     </main>
 
-    <section class="qualites">
+     <section class="qualites" id="qualites">
         <div class="container">
             <h3 class="qualites-title">
                 Преимущество в использоваение кератина
@@ -131,8 +134,7 @@
         </div>
     </section>
 
-
-    <section class="why">
+  <section class="why" id="why">
         <div class="container">
             <h3 class="why-title">Почему это важно?</h3>
 
@@ -171,8 +173,7 @@
         <img src="./img/components/ImportantSection-img/ImportantImage.png" alt="" class="why-image">
     </section>
 
-    
-    <section class="reviews">
+    <section class="reviews" id="reviews">
         <div class="container">
             <div class="reviews__header">
                 <h2 class="reviews__title">
@@ -184,209 +185,105 @@
             </div>
            
                
-            <div class="reviews-slider swiper">
-                <div class="reviews-slider-container  swiper-wrapper">
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+            <div class="reviews-slider">
+                <div class="reviews-slider-container">
+                        <div class="reviews__slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
+                        </div>  
+                        <div class="reviews__slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
+                        </div>  
+                        <div class="reviews__slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
+                        </div> 
+                        <div class="reviews__slide">
+                            <div class="reviews__slide-header">
+                                <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
+                                <div class="reviews__slide-info">
+                                    <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
+                                    <span class="reviews__slide-info--role">Клиент</span>
+                                    <div class="reviews__slide-info--rating">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                        <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    <div class="reviews__slide swiper-slide">
-                        <div class="reviews__slide-header">
-                            <img class="reviews__slide-avatar" src="./img/components/PeopleAvatar/PeopleAvatar.png" alt="Фотография Пашковой Аллы">
-                            <div class="reviews__slide-info">
-                                <h3 class="reviews__slide-info--name">Пашкова Алла</h3>
-                                <span class="reviews__slide-info--role">Клиент</span>
-                                <div class="reviews__slide-info--rating">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                    <img class="reviews__slide-star" src="./icons/components/Star-icon/Star-icon.svg" alt="star" aria-hidden="true">
-                                </div>
-                            </div>
-                        </div>
-
-                        <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
-                        <p class="reviews__slide-description">
-                            Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
-                        </p>
-                        <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
-                    </div>
-                    
+    
+                            <h4 class="reviews__slide-title">Прекрасно себя показал</h4>
+                            <p class="reviews__slide-description">
+                                Делала кератиновое выпрямление полтора года назад и... до сих пор по чуть-чуть срезаю волосы.
+                            </p>
+                            <a href="#" class="reviews__slide-link">Посмотреть отзыв</a>
+                        </div> 
                 </div>
-            </div>
-
-            <div class="reviews__navigation">
-                <button class="reviews__navigation-button-prev">
-                    <img src="icons/components/Arrows-icon/Arrow-left-icon.svg" alt="Предыдущий">
-                </button>
-                <button class="reviews__navigation-button-next">
-                    <img src="icons/components/Arrows-icon/Arrow-right-icon.svg" alt="Следующий">
-                </button>
-            </div>
-
-            <div class="reviews__pagination">
-                <span class="reviews__pagination-tab reviews__pagination-tab"></span>
-                <span class="reviews__pagination-tab "></span>
-                <span class="reviews__pagination-tab "></span>
             </div>
 
         </div>
     </section>
 
-    <section class="material">
+    <section class="material" id="material">
         <div class="container">
-            <h3 class="material__title">Как мы работаем с нашими клиентами</h3>
+            <h3 class="material__title">Процесс кератина волос</h3>
 
            <div class="material-template">
                 <video id="video" class="material-template_video" controls preload="auto" poster="./img/components/VideoSection-bg/bg-video-section.png">
@@ -411,17 +308,12 @@
                         <img src="./img/components/VideoSection-bg/bg-video-section.png" alt="" class="material-field_img">
                     </div>
                 </div>
-                <div class="material-pagination">
-                    <span class="material-pagination_tab material-pagination_tab__active"></span>
-                    <span class="material-pagination_tab"></span>
-                    <span class="material-pagination_tab"></span>
-                    <span class="material-pagination_tab"></span>
-                </div>
+               
            </div>
         </div>
     </section>
-
-    <section class="price">
+  
+    <section class="price" id="price">
         <div class="container">
             <h3 class="price__title">Прайс-лист</h3>
 
@@ -541,7 +433,7 @@
                     </div>
                     <ul class="question-item_list">
                         <li class="question-item_list-item">
-                            В целом это довольно безобидная процедура, но только при условии, что её проводит опытный мастер-парикмахер. Если подобных знаний у человека нет, последствия могут быть плачевными, ведь на заключительном этапе происходит обработка волос утюжком. При неправильно выставленной температуре их можно просто сжечь
+                            Процедура кератинового выпрямления волос занимает от 1,5 до 3 часов в зависимости от типа, густоты и длины волос.
                         </li>
                        
                     </ul>
@@ -554,8 +446,8 @@
                         </svg>
                     </div>
                     <ul class="question-item_list">
-                        <li class="question-item_list-item">Информационно-техническая безопасность</li>
-                        <li class="question-item_list-item">Информационно-психологическая безопасность</li>
+                        <li class="question-item_list-item">Да, кератиновое выравнивание подходит для всех типов волос.</li>
+                       
                     </ul>
                 </li>
                 <li class="question-item" data-collapsed="true">
@@ -566,32 +458,30 @@
                         </svg>
                     </div>
                     <ul class="question-item_list">
-                        <li class="question-item_list-item">Информационно-техническая безопасность</li>
-                        <li class="question-item_list-item">Информационно-психологическая безопасность</li>
+                        <li class="question-item_list-item">Да, кератиновое выравнивание можно проводить на окрашенных волосах.</li>
+                       
                     </ul>
                 </li>
                 <li class="question-item" data-collapsed="true">
                     <div class="question-item_head" >
-                        <div class="question-item_title">Какие ограничения после процедуры?</div>
+                        <div class="question-item_title">Каких ограничений придерживаться после кератинового выпрямления?</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 16 9" fill="none">
                             <path d="M8.75402 0.507492C8.37549 0.113273 7.74236 0.106985 7.33988 0.493448L0.781083 6.79122C0.378603 7.17768 0.359188 7.81055 0.737718 8.20476C1.11625 8.59898 1.74938 8.60527 2.15186 8.21881L7.9819 2.62079L13.465 8.33116C13.8435 8.72538 14.4767 8.73167 14.8792 8.34521C15.2816 7.95875 15.3011 7.32588 14.9225 6.93166L8.75402 0.507492ZM9.00776 1.78605L9.02522 1.21718L7.02531 1.19731L7.00786 1.76619L9.00776 1.78605Z" fill="#222222"/>
                         </svg>
                     </div>
                     <ul class="question-item_list">
-                        <li class="question-item_list-item">Информационно-техническая безопасность</li>
-                        <li class="question-item_list-item">Информационно-психологическая безопасность</li>
+                        <li class="question-item_list-item">В первый дни нельзя: Мыть голову, заплетать косы, не посещать баню, не пользоваться нагревающими утюжками для волос</li>
                     </ul>
                 </li>
                 <li class="question-item" data-collapsed="true">
                     <div class="question-item_head" >
-                        <div class="question-item_title">Как часто нужно делать кератин?</div>
+                        <div class="question-item_title">Как часто можно делать кератиновое выпрямление волос?</div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 16 9" fill="none">
                             <path d="M8.75402 0.507492C8.37549 0.113273 7.74236 0.106985 7.33988 0.493448L0.781083 6.79122C0.378603 7.17768 0.359188 7.81055 0.737718 8.20476C1.11625 8.59898 1.74938 8.60527 2.15186 8.21881L7.9819 2.62079L13.465 8.33116C13.8435 8.72538 14.4767 8.73167 14.8792 8.34521C15.2816 7.95875 15.3011 7.32588 14.9225 6.93166L8.75402 0.507492ZM9.00776 1.78605L9.02522 1.21718L7.02531 1.19731L7.00786 1.76619L9.00776 1.78605Z" fill="#222222"/>
                         </svg>
                     </div>
                     <ul class="question-item_list">
-                        <li class="question-item_list-item">Информационно-техническая безопасность</li>
-                        <li class="question-item_list-item">Информационно-психологическая безопасность</li>
+                        <li class="question-item_list-item">В среднем для поддержания эффекта достаточно делать кератиновое выпрямление два раза в год</li>
                     </ul>
                 </li>
                 <li class="question-item" data-collapsed="true">
@@ -602,8 +492,7 @@
                         </svg>
                     </div>
                     <ul class="question-item_list">
-                        <li class="question-item_list-item">Информационно-техническая безопасность</li>
-                        <li class="question-item_list-item">Информационно-психологическая безопасность</li>
+                        <li class="question-item_list-item">Кератиновое выпрямление может нанести вред волосам при безграмотно сделанной процедуре или при частом повторении.</li>
                     </ul>
                 </li>
             </ul>
@@ -616,7 +505,6 @@
       </div>
       <iframe class="map__rizen" src="https://yandex.ru/map-widget/v1/?um=constructor%3A7bcf1bafbfe2083d7e0e948648a78bad8507c0e464c2703c4d8f0dc60f1fce2d&amp;source=constructor" width="100%" height="715" frameborder="0"></iframe>
     </section>
-
 
     <footer class="footer">
         <div class="footer-wrapper">
@@ -661,56 +549,71 @@
                 <button class="footer-form_button">Отправить заявку</button>
             </form>
 
-            <div class="footer-template">
-                <h4 class="footer-template_title">
-                    Контакты
-                </h4>
+            <div class="footer-templates">
+                <div class="footer-template">
+                    <h4 class="footer-template_title">
+                        Навигация
 
-                <div class="footer-template_content">
-                    <h4 class="footer-template_content__title">Юридический адрес</h4>
-                    <p class="footer-template_content__descr">452410, Республика Башкортостан, <br/>г. Уфа, ул. Строителей, дом 27,<br/> корпус 1, этаж 3.</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 16 9" fill="none">
+                            <path d="M8.75402 0.507492C8.37549 0.113273 7.74236 0.106985 7.33988 0.493448L0.781083 6.79122C0.378603 7.17768 0.359188 7.81055 0.737718 8.20476C1.11625 8.59898 1.74938 8.60527 2.15186 8.21881L7.9819 2.62079L13.465 8.33116C13.8435 8.72538 14.4767 8.73167 14.8792 8.34521C15.2816 7.95875 15.3011 7.32588 14.9225 6.93166L8.75402 0.507492ZM9.00776 1.78605L9.02522 1.21718L7.02531 1.19731L7.00786 1.76619L9.00776 1.78605Z" fill="#fff"/>
+                        </svg>
+                    </h4>
+    
+                    <ul class="footer-template_list">
+                        <li class="footer-template_list__item">О компании</li>
+                        <li class="footer-template_list__item">Примущества</li>
+                        <li class="footer-template_list__item">Почему это важно</li>
+                        <li class="footer-template_list__item">Прайс-лист</li>
+                        <li class="footer-template_list__item">Вопросы</li>
+                    </ul>
                 </div>
-                <div class="footer-template_content">
-                    <h4 class="footer-template_content__title">Контактный центр</h4>
-                    <p class="footer-template_content__descr">+7 (967) 731-07-46</p>
-                </div>
-                <div class="footer-template_content">
-                    <h4 class="footer-template_content__title">Электонная почта</h4>
-                    <p class="footer-template_content__descr">olmacompany@gmail.com</p>
-                </div>
-                <div class="footer-template_content">
-                    <h4 class="footer-template_content__title">Офис:</h4>
-                    <p class="footer-template_content__descr">450071, Уфа, ул. 50 лет СССР, д 34, <br/>офис 103</p>
-                </div>
-            </div>
-            <div class="footer-template">
-                <h4 class="footer-template_title">
-                    Навигация
-                </h4>
+                <div class="footer-template">
+                    <h4 class="footer-template_title">
+                        Контакты
 
-                <ul class="footer-template_list">
-                    <li class="footer-template_list__item">О компании</li>
-                    <li class="footer-template_list__item">Примущества</li>
-                    <li class="footer-template_list__item">Почему это важно</li>
-                    <li class="footer-template_list__item">Прайс-лист</li>
-                    <li class="footer-template_list__item">Вопросы</li>
-                </ul>
-            </div>
-            <div class="footer-template">
-                <h4 class="footer-template_title">
-                    Реквизиты
-                </h4>
-                
-                <p class="footer-template_descr">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 16 9" fill="none">
+                            <path d="M8.75402 0.507492C8.37549 0.113273 7.74236 0.106985 7.33988 0.493448L0.781083 6.79122C0.378603 7.17768 0.359188 7.81055 0.737718 8.20476C1.11625 8.59898 1.74938 8.60527 2.15186 8.21881L7.9819 2.62079L13.465 8.33116C13.8435 8.72538 14.4767 8.73167 14.8792 8.34521C15.2816 7.95875 15.3011 7.32588 14.9225 6.93166L8.75402 0.507492ZM9.00776 1.78605L9.02522 1.21718L7.02531 1.19731L7.00786 1.76619L9.00776 1.78605Z" fill="#fff"/>
+                        </svg>
+                    </h4>
+    
+                    <div class="footer-template_content">
+                        <h4 class="footer-template_content__title">Юридический адрес</h4>
+                        <p class="footer-template_content__descr">452410, Республика Башкортостан, г. Уфа, ул. Строителей, дом 27, корпус 1, этаж 3.</p>
+                    </div>
+                    <div class="footer-template_content">
+                        <h4 class="footer-template_content__title">Контактный центр</h4>
+                        <p class="footer-template_content__descr">+7 (967) 731-07-46</p>
+                    </div>
+                    <div class="footer-template_content">
+                        <h4 class="footer-template_content__title">Электонная почта</h4>
+                        <p class="footer-template_content__descr">olmacompany@gmail.com</p>
+                    </div>
+                    <div class="footer-template_content">
+                        <h4 class="footer-template_content__title">Офис:</h4>
+                        <p class="footer-template_content__descr">450071, Уфа, ул. 50 лет СССР, д 34, офис 103</p>
+                    </div>
+                </div>
+              
+                <div class="footer-template">
+                    <h4 class="footer-template_title">
+                        Реквизиты
+
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="13" viewBox="0 0 16 9" fill="#ffffff">
+                            <path d="M8.75402 0.507492C8.37549 0.113273 7.74236 0.106985 7.33988 0.493448L0.781083 6.79122C0.378603 7.17768 0.359188 7.81055 0.737718 8.20476C1.11625 8.59898 1.74938 8.60527 2.15186 8.21881L7.9819 2.62079L13.465 8.33116C13.8435 8.72538 14.4767 8.73167 14.8792 8.34521C15.2816 7.95875 15.3011 7.32588 14.9225 6.93166L8.75402 0.507492ZM9.00776 1.78605L9.02522 1.21718L7.02531 1.19731L7.00786 1.76619L9.00776 1.78605Z" fill="#fff"/>
+                        </svg>
+                    </h4>
                     
-                    Р/cчет 40702810610000508370 в АО «Тинькофф Банк»
-                    БИК 044525974
-                    К/сч 30101810145250000974
-                    ОГРН 1177746566140 от 07.06.2017
-                    ИНН 9701078611
-                    КПП 773101001
-                </p>
-                   
+                    <p class="footer-template_descr">
+                        
+                        Р/cчет 40702810610000508370 в АО «Тинькофф Банк»
+                        БИК 044525974
+                        К/сч 30101810145250000974
+                        ОГРН 1177746566140 от 07.06.2017
+                        ИНН 9701078611
+                        КПП 773101001
+                    </p>
+                       
+                </div>
             </div>
            
         </div>
@@ -741,8 +644,8 @@
                 </li>
             </ul>
         </div>
-    </footer>
+    </footer> 
 
-    <script async src="js/script.js"></script>
+    <script  src="js/script.js"></script>
 </body>
 </html>

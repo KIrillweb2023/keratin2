@@ -27,7 +27,7 @@
         border: 1px solid #E9E9E9;
         height: 65px;
         &_active {
-            height: 150px;
+            height: 130px;
             .question-item_title {
                 color: #3D5AF1;
                 font-weight: 700;
@@ -43,6 +43,8 @@
             justify-content: space-between;
             align-items: center;
             svg {
+                width: 15px;
+                height: 15px;
                 transition: .3s ease-out;
             }
         }
@@ -55,7 +57,7 @@
         &_list {
             display: flex;
             flex-direction: column;
-            margin-left: 70px;
+            margin-left: 30px;
             margin-top: 22px;
             &-item {
                 color: #9A9A9A;

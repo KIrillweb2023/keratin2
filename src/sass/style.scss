@@ -1,8 +1,11 @@
+@import "./libs/fonts";
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'Gilroy', sans-serif;
+    scroll-behavior: smooth;
 }
 
 
@@ -11,6 +14,10 @@
     margin: 0 auto;
     position: relative;
 }
+
+// html {
+   
+// }
 
 
 button, textarea, input {
@@ -36,3 +43,13 @@ a {
 @import "./blocks/question";
 @import "./blocks/map";
 @import "./blocks/footer";
+// Media 
+@import "./media/container.media";
+@import "./media/header.media";
+@import "./media/qualites.media";
+@import "./media/why.media";
+@import "./media/reviews.media";
+@import "./media/material.media";
+@import "./media/price.media";
+@import "./media/question.media";
+@import "./media/footer.media";

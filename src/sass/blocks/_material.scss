@@ -1,7 +1,7 @@
 .material {
     height: auto;
     padding: 90px 0;
-
+    position: relative;
     &__title {
         font-size: 2rem;
         color: #304560;
@@ -20,6 +20,7 @@
     &-template {
         margin-top: 89px;
         position: relative;
+        height: 100%;
         &_video {
             width: 100%;
             border-radius: 20px;
@@ -79,29 +80,6 @@
             height: 100%;
             object-fit: cover;
             border-radius: 20px;
-        }
-    }
-
-
-
-    &-pagination {
-        position: relative;
-        text-align: center;
-        margin-top: 20px;
-        display: flex;
-        column-gap: 5px;
-        justify-content: center;
-        &_tab {
-            width: 12px;
-            height: 12px;
-            display: block;
-            border-radius: 100%;
-            background-color: #ddd;
-            opacity: 1;
-            cursor: pointer;
-            &__active{
-                background-color: #FF8C3A;
-            } 
         }
     }
 }
