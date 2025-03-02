@@ -27,16 +27,17 @@
 @media (max-width: 567px) {
     .question {
         &-item {
-            height: 75px;
+            height: 67px;
             // padding: 20px;
             &_title {
-                font-size: 16px;
+                font-size: 14px;
                 width: 90%;
             }
             &_active {
                 height: 150px;
             }
             &_list {
+                margin-left: 20px;
                 &-item {
                     font-size: 14px;
                 }

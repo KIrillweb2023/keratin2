@@ -3,6 +3,23 @@
     background-color: #F4F7FE;
     padding: 5rem 0;
 
+    &-pag {
+       
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 20px;
+        column-gap: 15px;
+        button {
+            width: 150px;
+            background-color: #2389FF;
+            height: 40px;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+        }
+    }
+
     &__title {
         font-size: 2.625rem;
         color: #304560;
@@ -18,16 +35,20 @@
     &-slider {
         overflow: hidden;
         margin-top: 20px;
+
         &-container {
             display: flex   ;
             // justify-content: space-between;
+            width: calc(320px * 8 + 45px);
             gap: 15px;
+            transition: 0.5s ease-in-out;
         }
     }
   
     &__slide {
-        width: 25%;
+        // width: 23%;
         padding: 30px;
+        min-width: 320px;
         background-color: #ffffff;
         border-radius: 1.25rem; 
         display: flex;
@@ -97,60 +118,60 @@
             text-decoration: none;
         }
     }
-    &__navigation {
-        position: absolute;
-        top: 57%;
-        left: -9%;
-        right: -9%;
-        display: flex;
-        justify-content: space-between;  
-        align-items: center;
-        padding: 0 1rem;                 
-    }
+    // &__navigation {
+    //     position: absolute;
+    //     top: 57%;
+    //     left: -9%;
+    //     right: -9%;
+    //     display: flex;
+    //     justify-content: space-between;  
+    //     align-items: center;
+    //     padding: 0 1rem;                 
+    // }
 
-    &__navigation-button-prev,
-    &__navigation-button-next {
-        width: 2.5rem;  
-        height: 2.5rem;         
-        border-radius: 50%;
-        background: rgba(35, 137, 255, 0.1);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-        border: none;            
-        padding: 0;         
-        &:hover {
-           border: 1px solid rgba(35, 138, 255, 0.534);
-           background: transparent;
-        }
-        img {
-            width: 15px;         
-            height: 15px;      
-            object-fit: contain;  
-        }
-    }
+    // &__navigation-button-prev,
+    // &__navigation-button-next {
+    //     width: 2.5rem;  
+    //     height: 2.5rem;         
+    //     border-radius: 50%;
+    //     background: rgba(35, 137, 255, 0.1);
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     cursor: pointer;
+    //     transition: background-color 0.3s ease;
+    //     border: none;            
+    //     padding: 0;         
+    //     &:hover {
+    //        border: 1px solid rgba(35, 138, 255, 0.534);
+    //        background: transparent;
+    //     }
+    //     img {
+    //         width: 15px;         
+    //         height: 15px;      
+    //         object-fit: contain;  
+    //     }
+    // }
 
-    &__pagination {
-        position: relative;
-        text-align: center;
-        margin-top: 20px;
-        display: flex;
-        column-gap: 5px;
-        justify-content: center;
-        &-tab {     
-            width: 12px;         
-            height: 12px;     
-            display: block;    
-            border-radius: 100%;
-            background-color: #ddd;      
-            opacity: 1;                
-            cursor: pointer;
-        }
-        &-tab-active { 
-            background-color: #2389FF;    
-        }
-    }
+    // &__pagination {
+    //     position: relative;
+    //     text-align: center;
+    //     margin-top: 20px;
+    //     display: flex;
+    //     column-gap: 5px;
+    //     justify-content: center;
+    //     &-tab {     
+    //         width: 12px;         
+    //         height: 12px;     
+    //         display: block;    
+    //         border-radius: 100%;
+    //         background-color: #ddd;      
+    //         opacity: 1;                
+    //         cursor: pointer;
+    //     }
+    //     &-tab-active { 
+    //         background-color: #2389FF;    
+    //     }
+    // }
 }
 

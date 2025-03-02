@@ -1,0 +1,34 @@
+@media (max-width: 992px) {
+    .map {
+     
+        &__title {
+            font-size: 30px;
+        }
+        &__rizen {
+            margin-top: 20px;
+            height: 600px;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .map {
+        &__title {
+            font-size: 26px;
+        }
+        &__rizen {
+           
+            height: 500px;
+        }
+    }
+}
+@media (max-width: 567px) {
+    .map {
+     
+        &__title {
+            font-size: 22px;
+        }
+
+       
+       
+    }
+}

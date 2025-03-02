@@ -16,18 +16,26 @@
         height: 800px;
       
     }
-
+    &-tab {
+        height: 100%;
+    }
     &-template {
-        margin-top: 89px;
+        margin-top: 50px;
         position: relative;
         height: 100%;
         &_video {
             width: 100%;
             border-radius: 20px;
+            height: 100%;
+            display: none;
+            &__active {
+                display: block;
+                animation: indicator-tab 1s;
+            }
         }
         &_source {
             display: flex;
-            width: 100% 
+            width: 100% ;
         }
     }
 
@@ -46,6 +54,7 @@
         z-index: 5;
         background-color: rgb(255, 255, 255, .5);
         cursor: pointer;
+        transition: 0.3s all;
         &_block {
             display: flex;
             justify-content: center;
@@ -54,6 +63,10 @@
             height: 120px;
             border-radius: 100%;
             background-color: #FFFFFF;
+        }
+
+        &_pause {
+            opacity: 0;
         }
     }
 
@@ -72,6 +85,7 @@
             opacity: 0.4;
             &__active {
                 opacity: 1;
+                animation: indicator-tab 1s;
             }
         }
 
@@ -81,5 +95,14 @@
             object-fit: cover;
             border-radius: 20px;
         }
+    }
+}
+
+@keyframes indicator-tab {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

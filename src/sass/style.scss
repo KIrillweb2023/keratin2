@@ -27,9 +27,9 @@ button, textarea, input {
 
 a {
     text-decoration: none;
-    &:hover {
-        text-decoration: underline;
-    }
+    // &:hover {
+    //     text-decoration: underline;
+    // }
 }
 
 
@@ -43,6 +43,8 @@ a {
 @import "./blocks/question";
 @import "./blocks/map";
 @import "./blocks/footer";
+@import "./blocks/modal";
+@import "./blocks/continue";
 // Media 
 @import "./media/container.media";
 @import "./media/header.media";
@@ -52,4 +54,7 @@ a {
 @import "./media/material.media";
 @import "./media/price.media";
 @import "./media/question.media";
+@import "./media/map.media";
 @import "./media/footer.media";
+@import "./media/modal.media";
+@import "./media/continue.media";
