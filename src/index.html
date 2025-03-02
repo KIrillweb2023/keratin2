@@ -1,12 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Keratin | Botox</title>
-    <link rel="stylesheet" href="./css/style.min.css">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" /> -->
-</head>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Кератиновое выпрямление волос в Уфе. Профессиональное восстановление и выпрямление волос с использованием кератина. Запишитесь на процедуру уже сегодня!">
+        <meta name="keywords" content="кератиновое выпрямление, восстановление волос, уход за волосами, кератин, Уфа, салон красоты">
+        <meta name="author" content="Ваше Имя или Название Компании">
+        <meta property="og:title" content="Кератиновое выпрямление волос | Уфа">
+        <meta property="og:description" content="Профессиональное кератиновое выпрямление волос в Уфе. Восстановление и уход за волосами.">
+        <meta property="og:image" content="URL изображения для соцсетей">
+        <meta property="og:url" content="URL вашей страницы">
+        <meta name="twitter:card" content="summary_large_image">
+        <title>Кератиновое выпрямление волос | Уфа</title>
+        <link rel="stylesheet" href="./css/style.min.css">
+    </head>
 <body>
     <header class="header">
         <div class="header-wrapper">
@@ -32,10 +39,10 @@
                         <a href="#price" class="header-nav-list_item__link"> Прайс-лист </a>
                     </li>
                     <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Вопросы </a>
+                        <a href="#question" class="header-nav-list_item__link"> Вопросы </a>
                     </li>
                     <li class="header-nav-list_item">
-                        <a href="#" class="header-nav-list_item__link"> Мы на карте </a>
+                        <a href="#map" class="header-nav-list_item__link"> Мы на карте </a>
                     </li>
                 </ul>
             </nav>
@@ -527,7 +534,7 @@
         </div>
     </section>
 
-    <section class="question">
+    <section id="question" class="question">
         <div class="container">
             <h2 class="question__title">Часто задавыемые вопросы</h2>
 
@@ -607,7 +614,7 @@
         </div>
     </section>
 
-    <section class="map">
+    <section class="map" id="map">
       <div class="container">
         <div class="map__title">Мы на карте</div>
       </div>
@@ -646,12 +653,10 @@
                     </svg>    
                 </div>
                 <div class="footer-form_policy">
-                    <div class="footer-form_check">
-                        <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.74656 9C4.52212 9 4.29812 8.91574 4.12672 8.7468L0 4.6791L1.23968 3.45672L4.74656 6.91344L11.7603 0L13 1.22238L5.3664 8.7468C5.195 8.91574 4.971 9 4.74656 9Z" fill="#272640"/>
-                        </svg>
-                            
-                    </div>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="modal-form_check">
+                        <span class="checkmark"></span>
+                      </label>
                     <p >Я согласен с <a href="">политикой конфиденциальности</a></p>
                 </div>
                 <button class="footer-form_button">Отправить заявку</button>
@@ -794,13 +799,11 @@
                     </svg>    
                 </div>
                 <div class="modal-form_policy">
-                    <div class="modal-form_check">
-                        <svg width="13" height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M4.74656 9C4.52212 9 4.29812 8.91574 4.12672 8.7468L0 4.6791L1.23968 3.45672L4.74656 6.91344L11.7603 0L13 1.22238L5.3664 8.7468C5.195 8.91574 4.971 9 4.74656 9Z" fill="#272640"/>
-                        </svg>
-                            
-                    </div>
-                    <p >Я согласен с <a href="">политикой конфиденциальности</a></p>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="modal-form_check">
+                        <span class="checkmark"></span>
+                    </label>
+                    <p >Я согласен с <a href="#">политикой конфиденциальности</a></p>
                 </div>
                 <button class="modal-form_button">Отправить заявку</button>
                 <div class="modal-back"></div>

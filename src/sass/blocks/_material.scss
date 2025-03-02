@@ -83,6 +83,7 @@
             width: 100px;
             height: 100px;
             opacity: 0.4;
+            cursor: pointer;
             &__active {
                 opacity: 1;
                 animation: indicator-tab 1s;

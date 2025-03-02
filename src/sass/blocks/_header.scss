@@ -58,7 +58,13 @@
         align-items: center;
         column-gap: 10px;
         border-radius: 7px;
+        transition: .4s all;
+        border: 1px solid #FF8C3A;
         cursor: pointer;
+        &:hover {
+            background-color: transparent;
+            border: 1px solid #FF8C3A;
+        }
         &-img {
             width: 20px;
         }

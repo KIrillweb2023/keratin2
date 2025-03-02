@@ -71,40 +71,12 @@
             column-gap: 10px;
             
         }
-
-        &_check {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 25px;
-            height: 25px;
-            border-radius: 5px;
-            box-shadow: 0 0px 5px 5px #0000000c;
-            cursor: pointer;
-            transition: .5s all;
-            // &:hover {
-            //     background-color: #4a3aff6e;
-            //     svg {
-            //         path {
-            //             fill: #fff;
-            //         }
-            //     }
-            // } 
-            &__active {
-                background-color: #4A3AFF;
-                svg {
-                    path {
-                        fill: #fff;
-                    }
-                }
-            }
-        }
-
         &_content {
             width: 100%;
             height: 60px;
             position: relative;
             &__field {
+                resize: none;
                 width: 100%;
                 height: 100%;
                 box-shadow: 0 5px 20px 0 #020e201a;
