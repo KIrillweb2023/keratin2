@@ -87,12 +87,14 @@
                 }
             }
             &_list {
-                row-gap: 15px   ;
+                row-gap: 20px   ;
                 padding-left: 20px;
                 &__item {
                     font-size: 16px;
                     width: 100%;
                 }
+
+            
             }
         }
         &-subinfo {

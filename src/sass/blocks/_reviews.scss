@@ -33,26 +33,28 @@
     }
 
     &-slider {
+        width: 100%;
+        // max-width: 1200px; /* Увеличил максимальную ширину */
+        position: relative;
         overflow: hidden;
         margin-top: 20px;
 
         &-container {
             display: flex   ;
-            // justify-content: space-between;
-            width: calc(320px * 8 + 45px);
-            gap: 15px;
-            transition: 0.5s ease-in-out;
+            transition: transform 0.5s ease-in-out;
         }
     }
   
     &__slide {
         // width: 23%;
+        height: 100%;
         padding: 30px;
-        min-width: 320px;
+        // min-width: 320px;
         background-color: #ffffff;
         border-radius: 1.25rem; 
         display: flex;
         flex-direction: column;
+        box-sizing: border-box;
         &-header {
             display: flex;
             align-items: center;
@@ -118,60 +120,43 @@
             text-decoration: none;
         }
     }
-    // &__navigation {
-    //     position: absolute;
-    //     top: 57%;
-    //     left: -9%;
-    //     right: -9%;
-    //     display: flex;
-    //     justify-content: space-between;  
-    //     align-items: center;
-    //     padding: 0 1rem;                 
-    // }
+  
+}
 
-    // &__navigation-button-prev,
-    // &__navigation-button-next {
-    //     width: 2.5rem;  
-    //     height: 2.5rem;         
-    //     border-radius: 50%;
-    //     background: rgba(35, 137, 255, 0.1);
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     cursor: pointer;
-    //     transition: background-color 0.3s ease;
-    //     border: none;            
-    //     padding: 0;         
-    //     &:hover {
-    //        border: 1px solid rgba(35, 138, 255, 0.534);
-    //        background: transparent;
-    //     }
-    //     img {
-    //         width: 15px;         
-    //         height: 15px;      
-    //         object-fit: contain;  
-    //     }
-    // }
+@media (min-width: 992px) {
+    .reviews-slider-container {
+      width: 266.66666667%; /*  (8 slides / 3 visible) * 100 */
+    }
+    .review__slide {
+      width: 33.33333333%; /* 100 / 3 visible slides */
+    }
+  }
 
-    // &__pagination {
-    //     position: relative;
-    //     text-align: center;
-    //     margin-top: 20px;
-    //     display: flex;
-    //     column-gap: 5px;
-    //     justify-content: center;
-    //     &-tab {     
-    //         width: 12px;         
-    //         height: 12px;     
-    //         display: block;    
-    //         border-radius: 100%;
-    //         background-color: #ddd;      
-    //         opacity: 1;                
-    //         cursor: pointer;
-    //     }
-    //     &-tab-active { 
-    //         background-color: #2389FF;    
-    //     }
-    // }
+  @media (max-width: 991px) and (min-width: 568px){
+      .reviews-slider-container {
+          width: 200%; /* (8 слайдов / 4 видимых) * 100% = 200% */
+      }
+      .review__slide {
+          width: 25%; /* 100% / 4 видимых слайда */
+      }
+
+  }
+
+  @media (max-width: 567px) {
+    .reviews-slider-container {
+      width: 800%;  /*(8 slides / 1 visible) * 100 */
+    }
+    .review__slide {
+      width: 12.5%;  /* 100 / 8 slides */
+      padding: 5px;
+    }
+  }
+
+  @media (max-width: 320px) {
+    .reviews-slider {
+      width: 95%;
+    }
+
+   
 }
 

@@ -102,40 +102,61 @@ function onClickEventTab() {
 
 onClickEventTab()
 
+const sliderContainer = document.querySelector('.reviews-slider');
+const slides = document.querySelector('.reviews-slider-container');
+const prevBtn = document.querySelector('.reviews-pag_prev');
+const nextBtn = document.querySelector('.reviews-pag_next');
+let slideWidth;
+let slideIndex = 0;
+const totalSlides = 8;
+let visibleSlides = 4; // Начальное значение (для промежуточного размера)
 
-const next = document.querySelector(".reviews-pag_next")
-const prev = document.querySelector(".reviews-pag_prev")
-const containerSlide = document.querySelector(".reviews-slider-container")
-const widthSlide = containerSlide.children[0].clientWidth;
-
-let transformSlide = 0
-let indexSlide = 0
-
-window.addEventListener("resize", () => {
-    
-    nextSlide()
-    prevSlide()
-})
-
-
-function nextSlide() {
-    next.addEventListener("click", (e) => {
-        indexSlide === 4 ? (indexSlide = 0, transformSlide = 0) : (indexSlide++, transformSlide += widthSlide + 15);
-        containerSlide.style.transform = `translateX(-${transformSlide}px)`;
-        console.log(indexSlide)
-    })
+function updateVisibleSlides() {
+      if (window.innerWidth >= 992) {
+          visibleSlides = 3;
+      } else if (window.innerWidth <= 567) {
+          visibleSlides = 1;
+      } else {
+          visibleSlides = 4;
+      }
 }
 
-function prevSlide() {
-    prev.addEventListener("click", (e) => {
-        indexSlide === 0 ? (indexSlide = 4, transformSlide += widthSlide * 3 + 45) : (indexSlide--, transformSlide -= widthSlide + 15) ;
-        containerSlide.style.transform = `translateX(-${transformSlide}px)`;
-        console.log(indexSlide)
-    })
+function updateSlideWidth() {
+  slideWidth = sliderContainer.offsetWidth;
 }
 
-nextSlide()
-prevSlide()
+function updateSlider() {
+    slides.style.transform = `translateX(-${slideIndex * (slideWidth / visibleSlides)}px)`;
+}
+
+  prevBtn.addEventListener('click', () => {
+      slideIndex = (slideIndex > 0) ? slideIndex - 1 : totalSlides - visibleSlides;
+      updateSlider();
+  });
+
+  nextBtn.addEventListener('click', () => {
+      slideIndex = (slideIndex < totalSlides - visibleSlides) ? slideIndex + 1 : 0;
+      updateSlider();
+  });
+
+  // Автоматическое переключение
+  let autoSlideInterval = setInterval(() => {
+      slideIndex = (slideIndex < totalSlides - visibleSlides) ? slideIndex + 1 : 0;
+      updateSlider();
+  }, 5000);
+
+function handleResize() {
+    updateVisibleSlides();
+    updateSlideWidth();
+    updateSlider();
+}
+
+window.addEventListener('resize', handleResize);
+
+// Инициализация
+updateVisibleSlides();
+updateSlideWidth();
+updateSlider();
 
 const modalForm = document.querySelector(".modal");
 const modalContinue = document.querySelector(".continue");
@@ -161,3 +182,50 @@ formCheck.addEventListener("click", (e) => {
     formCheck.classList.toggle("modal-form_check__active")
 })
 
+
+
+const formFooter = document.querySelector(".footer-form");
+const formModal = document.querySelector(".modal-form");
+
+
+mailerPush(formFooter, "name-footer-input", "number-footer-input", "email-footer-input", "message-footer-input")
+mailerPush(formModal, "name-modal-input", "number-modal-input", "email-modal-input", "message-modal-input")
+
+function mailerPush(form, nameID, numberID, emailID, messageID) {
+    form.addEventListener('submit',  function(event) {
+        event.preventDefault();
+    
+     
+        const nameI = document.getElementById(nameID).value;
+        const emailI = document.getElementById(emailID).value;
+        const numberI = document.getElementById(numberID).value;
+        const messageI = document.getElementById(messageID).value;
+    
+        const formData = new FormData();
+        formData.append('name', nameI);
+        formData.append('email', emailI);
+        formData.append('number', numberI);
+        formData.append('message', messageI);
+        console.log(formData);
+    
+         fetch('mailer/smart.php', {
+            method: 'POST',
+            body: formData
+        })
+        .then(response => {
+            if (response.ok) {
+               
+                return response.text()
+            } else {
+                throw new Error('Network response was not ok.');
+            }
+        })
+        .then(data => {
+            form.reset();
+           console.log(data)
+        })
+        .catch(error => {
+           console.log(error)
+        });
+    });
+}

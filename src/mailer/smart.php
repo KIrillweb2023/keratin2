@@ -1,38 +1,28 @@
 <?php 
 
-if(
-	!empty($_POST['name']) && 
-	!empty($_POST['surname']) && 
-	!empty($_POST['number']) && 
-	!empty($_POST['email']) && 
-	!empty($_POST['city']) && 
-	!empty($_POST['index']) &&
-	!empty($_POST['address']) 
+if(!empty($_POST['name']) && !empty($_POST['number']) && !empty($_POST['email']) && !empty($_POST['message'])) {
 
-	) {
 	$name = $_POST['name'];
-	$surname = $_POST['surname'];
 	$number = $_POST['number'];
 	$email = $_POST['email'];
-	$city = $_POST['city'];
-	$index = $_POST['index'];
-	$address = $_POST['address'];
+	$message = $_POST['message'];
+
 	require_once('phpmailer/PHPMailerAutoload.php');
 	$mail = new PHPMailer;
 	$mail->CharSet = 'utf-8';
 
-	// $mail->SMTPDebug = 3;                               // Enable verbose debug output
+	$mail->SMTPDebug = 3;                               // Enable verbose debug output
 
 	$mail->isSMTP();                                      // Set mailer to use SMTP
-	$mail->Host = 'smtp.mail.ru';  // Specify main and backup SMTP servers
+	$mail->Host = 'smtp.yandex.ru';  // Specify main and backup SMTP servers
 	$mail->SMTPAuth = true;                               // Enable SMTP authentication
-	$mail->Username = 'nikixodr4@mail.ru';                 // Наш логин
-	$mail->Password = 'EQe57TEapJ71MHmdPnHi';                           // Наш пароль от ящика
+	$mail->Username = 'k1.guliaev@yandex.ru';                 // Наш логин
+	$mail->Password = 'oiowtjmpxdnmyjvw';                           // Наш пароль от ящика
 	$mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 	$mail->Port = 465;                                    // TCP port to connect to
 	
-	$mail->setFrom('nikixodr4@mail.ru', 'Nikita Cevich Site:');   // От кого письмо
-	$mail->addAddress('nikcevichoff@gmail.com');     // Add a recipient Кому письмо
+	$mail->setFrom('k1.guliaev@yandex.ru', 'Keratin Web-Site(Заявка с сайта):');   // От кого письмо
+	$mail->addAddress('gulaevkirill899@gmail.com');     // Add a recipient Кому письмо
 	//$mail->addAddress('ellen@example.com');               // Name is optional
 	//$mail->addReplyTo('info@example.com', 'Information');
 	//$mail->addCC('cc@example.com');
@@ -43,15 +33,44 @@ if(
 
 	$mail->Subject = 'Данные';
 	$mail->Body    = '
-			Данные пользователя<br> 
-			Имя: ' . $name . ' <br>
-			Фамилия: ' . $surname . '<br>
-			Номер телефона: ' . $number . '<br>
-			Почта: ' . $email . ' <br>
-			Город/населённый пункт: ' . $city . '<br>
-			Почтовый индекс: ' . $index . '<br>
-			Адрес: ' . $address . '<br>';
-
+			<body style="margin: 0; padding: 0; background-color: #f4f4f4;">
+          <table width="100%" border="0" cellspacing="0" cellpadding="0" style="font-family: Arial, sans-serif; font-size: 16px; color: #333333;">
+            <tr>
+              <td align="center" style="padding: 20px;">
+                <table width="600" border="0" cellspacing="0" cellpadding="0" style="background-color: #ffffff; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1);">
+                  <tr>
+                    <td style="padding: 30px;">
+                      <h1 style="font-size: 24px; color: #29abe2; margin-top: 0;">Новая заявка с сайта</h1>
+                      <p>У вас новая заявка с сайта. Подробности:</p>
+                      <hr style="border: none; border-top: 1px solid #dddddd; margin: 20px 0;">
+                      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                        <tr>
+                          <td style="padding: 5px 0; width: 120px; font-weight: bold;">Имя:</td>
+                          <td style="padding: 5px 0;">' . htmlspecialchars($name) . '</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 0; font-weight: bold;">Email:</td>
+                          <td style="padding: 5px 0;"><a href="mailto:' . htmlspecialchars($email) . '" style="color: #29abe2; text-decoration: none;">' . htmlspecialchars($email) . '</a></td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 0; font-weight: bold;">Телефон:</td>
+                          <td style="padding: 5px 0;">' . htmlspecialchars($number) . '</td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 5px 0; font-weight: bold;">Сообщение:</td>
+                          <td style="padding: 5px 0;">' . nl2br(htmlspecialchars($message)) . '</td>
+                        </tr>
+                      </table>
+                      <hr style="border: none; border-top: 1px solid #dddddd; margin: 20px 0;">
+                      <p style="font-size: 12px; color: #777777; text-align: center;">Вам отправили заявку с вашего сайта!</p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+        </body>
+		';
 
 	if(!$mail->send()) {
 		return false;

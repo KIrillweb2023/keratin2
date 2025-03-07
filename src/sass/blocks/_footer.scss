@@ -149,24 +149,48 @@
                 cursor: pointer;
                 position: relative;
                 width: 100%;
-                &::before {
-                    content: "";
-                    position: absolute;
-                    left: 0;
-                    width: 0%;
-                    height: 3px;
-                    border-radius: 10px;
-                    background-color: #ffffff;
-                    z-index: 3;
-                    bottom: -13px;
-                    transition: .3s all;
-                }
-                &:hover {
+             
+                a {
+                    color: #fff;
+                    position: relative;
                     &::before {
-                      width: 50%;
-    
+                        content: "";
+                        position: absolute;
+                        left: 0;
+                        width: 0%;
+                        height: 3px;
+                        border-radius: 10px;
+                        background-color: #ffffff;
+                        z-index: 3;
+                        bottom: -10px;
+                        transition: .3s all;
                     }
+                    &:hover {
+                        &::before {
+                          width: 100%;
+        
+                        }
+                    }
+                   
                 }
+                // &::before {
+                //     content: "";
+                //     position: absolute;
+                //     left: 0;
+                //     width: 0%;
+                //     height: 3px;
+                //     border-radius: 10px;
+                //     background-color: #ffffff;
+                //     z-index: 3;
+                //     bottom: -10px;
+                //     transition: .3s all;
+                // }
+                // &:hover {
+                //     &::before {
+                //       width: 50%;
+    
+                //     }
+                // }
             }
         }
     }
