@@ -8,6 +8,7 @@
             font-size: 18px;
         }
         &__slide {
+            width:290px!important;min-width:310px
             &-header {
                 column-gap: 1.25rem;
             }
@@ -71,7 +72,7 @@
     .reviews {
       
         &__slide {
-           
+            min-width: 5%;
             padding: 30px 20px;
             &-header {
                 column-gap: 1rem;
@@ -107,7 +108,7 @@
         }
        
         &__slide {
-           
+            width: 100%!important;
             padding: 30px 40px;
             &-avatar {
                 width: 5rem; 
@@ -135,7 +136,7 @@
         }
        
         &__slide {
-          
+            min-width:16%;
             padding: 30px 40px;
             &-avatar {
                 width: 5rem; 
@@ -166,7 +167,7 @@
         }
         &__slide {
             padding: 25px 20px;
-        
+            min-width:15%
             &-avatar {
                 width: 4rem; 
                 height: 4rem; 

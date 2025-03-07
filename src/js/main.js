@@ -102,61 +102,39 @@ function onClickEventTab() {
 
 onClickEventTab()
 
-const sliderContainer = document.querySelector('.reviews-slider');
-const slides = document.querySelector('.reviews-slider-container');
-const prevBtn = document.querySelector('.reviews-pag_prev');
-const nextBtn = document.querySelector('.reviews-pag_next');
-let slideWidth;
-let slideIndex = 0;
-const totalSlides = 8;
-let visibleSlides = 4; // Начальное значение (для промежуточного размера)
+const next = document.querySelector(".reviews-pag_next")
+const prev = document.querySelector(".reviews-pag_prev")
+const containerSlide = document.querySelector(".reviews-slider-container")
+const widthSlide = containerSlide.children[0].clientWidth;
 
-function updateVisibleSlides() {
-      if (window.innerWidth >= 992) {
-          visibleSlides = 3;
-      } else if (window.innerWidth <= 567) {
-          visibleSlides = 1;
-      } else {
-          visibleSlides = 4;
-      }
+let transformSlide = 0
+let indexSlide = 0
+
+window.addEventListener("resize", () => {
+    
+    nextSlide()
+    prevSlide()
+})
+
+
+function nextSlide() {
+    next.addEventListener("click", (e) => {
+        indexSlide === 4 ? (indexSlide = 0, transformSlide = 0) : (indexSlide++, transformSlide += widthSlide + 15);
+        containerSlide.style.transform = `translateX(-${transformSlide}px)`;
+        console.log(indexSlide)
+    })
 }
 
-function updateSlideWidth() {
-  slideWidth = sliderContainer.offsetWidth;
+function prevSlide() {
+    prev.addEventListener("click", (e) => {
+        indexSlide === 0 ? (indexSlide = 4, transformSlide += widthSlide * 3 + 45) : (indexSlide--, transformSlide -= widthSlide + 15) ;
+        containerSlide.style.transform = `translateX(-${transformSlide}px)`;
+        console.log(indexSlide)
+    })
 }
 
-function updateSlider() {
-    slides.style.transform = `translateX(-${slideIndex * (slideWidth / visibleSlides)}px)`;
-}
-
-  prevBtn.addEventListener('click', () => {
-      slideIndex = (slideIndex > 0) ? slideIndex - 1 : totalSlides - visibleSlides;
-      updateSlider();
-  });
-
-  nextBtn.addEventListener('click', () => {
-      slideIndex = (slideIndex < totalSlides - visibleSlides) ? slideIndex + 1 : 0;
-      updateSlider();
-  });
-
-  // Автоматическое переключение
-  let autoSlideInterval = setInterval(() => {
-      slideIndex = (slideIndex < totalSlides - visibleSlides) ? slideIndex + 1 : 0;
-      updateSlider();
-  }, 5000);
-
-function handleResize() {
-    updateVisibleSlides();
-    updateSlideWidth();
-    updateSlider();
-}
-
-window.addEventListener('resize', handleResize);
-
-// Инициализация
-updateVisibleSlides();
-updateSlideWidth();
-updateSlider();
+nextSlide()
+prevSlide()
 
 const modalForm = document.querySelector(".modal");
 const modalContinue = document.querySelector(".continue");
