@@ -1,3 +1,5 @@
+import SlimeInit from "./modules/Slider";
+
 let item = document.querySelectorAll(".question-item");
 
 item.forEach((item) => {
@@ -102,39 +104,8 @@ function onClickEventTab() {
 
 onClickEventTab()
 
-const next = document.querySelector(".reviews-pag_next")
-const prev = document.querySelector(".reviews-pag_prev")
-const containerSlide = document.querySelector(".reviews-slider-container")
-const widthSlide = containerSlide.children[0].clientWidth;
-
-let transformSlide = 0
-let indexSlide = 0
-
-window.addEventListener("resize", () => {
-    
-    nextSlide()
-    prevSlide()
-})
 
 
-function nextSlide() {
-    next.addEventListener("click", (e) => {
-        indexSlide === 4 ? (indexSlide = 0, transformSlide = 0) : (indexSlide++, transformSlide += widthSlide + 15);
-        containerSlide.style.transform = `translateX(-${transformSlide}px)`;
-        console.log(indexSlide)
-    })
-}
-
-function prevSlide() {
-    prev.addEventListener("click", (e) => {
-        indexSlide === 0 ? (indexSlide = 4, transformSlide += widthSlide * 3 + 45) : (indexSlide--, transformSlide -= widthSlide + 15) ;
-        containerSlide.style.transform = `translateX(-${transformSlide}px)`;
-        console.log(indexSlide)
-    })
-}
-
-nextSlide()
-prevSlide()
 
 const modalForm = document.querySelector(".modal");
 const modalContinue = document.querySelector(".continue");
@@ -207,3 +178,39 @@ function mailerPush(form, nameID, numberID, emailID, messageID) {
         });
     });
 }
+
+
+document.addEventListener("DOMContentLoaded", (e) => {
+
+    const Slime = new SlimeInit({
+        sliderClass: ".reviews",
+        navigation: {
+            nextSlideBtn: ".reviews-navigation-next",
+            prevSlideBtn: ".reviews-navigation-prev"
+        },
+        previewSlides: 4,
+        speedSlider: 0.6,
+        previewScrollSlide: 3,
+        pagination: true,
+        breakpoints: [
+            {
+                breakpointSize: 1300,
+                previewScrollSlide: 3,
+                previewSlides: 3
+            },
+            {
+                breakpointSize: 900,
+                previewScrollSlide: 2,
+                previewSlides: 2
+            },
+            {
+                breakpointSize: 600,
+                previewScrollSlide: 1,
+                previewSlides: 1
+            }
+        ]
+    });
+
+    Slime.InitSlider(); 
+
+})

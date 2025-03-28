@@ -39,7 +39,8 @@ gulp.task("build-js", () => {
                                     debug: true,
                                     corejs: 3,
                                     useBuiltIns: "usage"
-                                }]]
+                                }]],
+                                plugins: ["@babel/plugin-proposal-class-properties"]
                               }
                             }
                           }
@@ -89,7 +90,8 @@ gulp.task("build-prod-js", () => {
                                 presets: [['@babel/preset-env', {
                                     corejs: 3,
                                     useBuiltIns: "usage"
-                                }]]
+                                }]],
+                                plugins: ["@babel/plugin-proposal-class-properties"]
                               }
                             }
                           }

@@ -1,10 +1,8 @@
-.main {
-    height: auto;
-    width: 100%;
+
 
     .home {
         width: 100%;
-        height: calc(100vh - 85px);
+        height: 100vh;
         position: relative;
         padding-top: 300px;
         background: url("../img/components/Background-img/Background-img.png") center center / cover no-repeat;
@@ -96,4 +94,3 @@
             bottom: 0;
         }
     }
-}
